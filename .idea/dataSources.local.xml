@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - maps@localhost" uuid="ff13f03d-9556-486f-ab64-2f45e3604f6a">
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="MySQL - maps@localhost [2]" uuid="8285bda2-bf9a-49c3-bd41-f1723a7eb37a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>maps.*</schema-pattern>
+      <default-schemas>maps.*</default-schemas>
+    </data-source>
+  </component>
+</project>

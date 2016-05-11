@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<context:component-scan base-package="com.map.app" />
+	<bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver" />
+
+	<!-- Start Hibernate Configuration -->
+	<!-- DataSource -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/maps" />
+		<property name="username" value="root" />
+		<property name="password" value="admin" />
+		<property name="validationQuery" value="SELECT 1" />
+	</bean>
+
+	<!-- SessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.map.app.entities" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- End Hibernate Configuration -->
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="coordinatesDAO" class="com.map.app.DAO.Impl.CoordinatesDAOImpl" />
+	<bean id="statusDAO" class="com.map.app.DAO.Impl.StatusDAOImpl" />
+	<bean id="userDAO" class="com.map.app.DAO.Impl.UserDAOImpl" />
+
+	<bean id="coordinatesService" class="com.map.app.service.Impl.CoordinatesServiceImpl" />
+	<bean id="statusService" class="com.map.app.service.Impl.StatusServiceImpl" />
+	<bean id="userService" class="com.map.app.service.Impl.UserServiceImpl" />
+</beans>

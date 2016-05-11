@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="style/main.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="app">
+
+<!-- Add your site or application content here -->
+<div class="header-wrapper">
+  <div class="header">
+    <div class="logo">
+      <h1>Google Maps</h1>
+    </div>
+    <!---logo ends here -->
+    <div class="menu" ng-controller="MenuController as menu">
+      <ul>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="/mApp/#/map">Map</a></li>
+        <li><a href="#">Contact</a></li>
+        <li ng-if="!$storage.user.name"><a href="/mApp/#/login">Login</a></li>
+        <li ng-if="$storage.user.name"><a href="/mApp/#/">Logout</a></li>
+      </ul>
+    </div>
+    <!--- menu ends here -->
+  </div>
+  <!---headerends here -->
+</div>
+<!---header-wrapper-ends here -->
+
+<div class="container">
+  <div ng-view=""></div>
+</div>
+
+<div class="footer-wrapper">
+  <div class="footer">
+    <div class="footer-content">
+      <h1>Nisi ut aliquid</h1>
+      <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem ldantium, ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.</p>
+      <a href="#" class="more1">More</a>
+    </div>
+    <div class="footer-content">
+      <h1>Obcaecati cupiditate</h1>
+      <ul>
+        <li><a href="#">Vestibulum at lacus quis ante tristique facili</a></li>
+        <li><a href="#">Morbi ac dolor sed risus sollicitudin eleife</a></li>
+        <li><a href="#">Nullam eget risus eu leo consectetur</a></li>
+        <li><a href="#">Nullam molestie turpis ut est viverra sit</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h1>Excepturi sint</h1>
+
+      <div class="newsletter">
+
+        <input name="" type="text" class="newsletter-input"/>
+        <a href="#"><img src="images/btn-subscribe.gif" /></a>        </div>
+
+      &#169; mApp<br />
+
+      <a href="http://alltemplateneeds.com" class="footerlink">www.alltemplateneeds.com </a>    <br />
+
+      Images From: <a href="#" class="footerlink">www.photorack.net</a>
+    </div>
+  </div>
+</div>
+<!---footer-wrapper ends here-->
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="js/lib.js"></script>
+<script src="js/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="login">
+    <div class="login-background">
+        <table border="0">
+            <tr>
+                <td>username:</td>
+                <td><input type="text" name="userName" ng-model="login.userName"/></td>
+            </tr>
+            <tr>
+                <td>parola:</td>
+                <td><input type="password" name="password" ng-model="login.password"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="button" type="button" ng-click="login.login()">Login</button></td>
+            </tr>
+        </table>
+        <div>Daca nu ai cont, creaza-ti unul <a class="createLink" href="/mApp/#/register">aici</a>!</div>
+    </div>
+    <div class="{{login.cssClass}}">{{login.message}}</div>
+</div>
