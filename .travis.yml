@@ -1,0 +1,9 @@
+language: java
+jdk:
+  - openjdk7
+  - oraclejdk7  
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'mApp' ]; then cd .. && eval "mv $currentfolder mApp" && cd mApp; fi
+  - npm install -g bower grunt-cli grunt
+  - bower install && npm install && grunt
