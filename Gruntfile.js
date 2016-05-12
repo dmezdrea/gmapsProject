@@ -103,7 +103,6 @@ module.exports = function(grunt) {
         files: '<%= jshint.all %>',
         tasks: ['concat:js'],
         options: {
-          reload: true,
           livereload: {
               host: 'localhost',
               port: 1337
@@ -112,9 +111,8 @@ module.exports = function(grunt) {
       },
       templates: {
         files: ['<%= folders.webapp.root %>/index.html', '<%= folders.webapp.root %>pages/**/*.html'],
-        tasks: [ 'copy:pages' ],
+        tasks: [ 'copy:templates' ],
         options: {
-          reload: true,
           livereload: {
               host: 'localhost',
               port: 1337
@@ -125,7 +123,6 @@ module.exports = function(grunt) {
         files: '<%= folders.webapp.root %>/style/*.css',
         tasks: [ 'concat:css' ],
         options: {
-          reload: true,
           livereload: {
               host: 'localhost',
               port: 1337

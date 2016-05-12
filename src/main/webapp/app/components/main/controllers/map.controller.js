@@ -20,13 +20,13 @@
         };
         vm.zoom = 15;
         vm.marker = {};
+        vm.activeMarker = {};
         vm.events = {
             click: function (map, eventName, originalEventArgs) {
                 var e = originalEventArgs[0];
-                vm.marker.coords = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
                 vm.markers.push({latitude: e.latLng.lat(), longitude: e.latLng.lng()});
                 var attributes = {};
-                attributes.marker = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
+                attributes.marker = {latitude: e.latLng.lat(), longitude: e.latLng.lng(), id: -1};
                 attributes.canDelete = true;
                 vm.markersAttributes.push(attributes);
                 $scope.$apply();
@@ -54,35 +54,27 @@
                     latitude: 44.435730,
                     longitude: 26.048109
                 };
+                vm.zoom = 15;
+                vm.active = {};
+                vm.mapOptions = {
+                    addCoordinates: addCoordinates
+                };
+
+                $scope.$root.addCoordinates = addCoordinates;
 
                 vm.marker = {
-                    coords: {
-                        latitude: 44.435730,
-                        longitude: 26.048109
-                    },
-                    name: '',
-                    description: '',
-                    city: '',
-
                     key: 1,
                     events: {
                         click: function (gMarker, eventName, model) {
-                              console.debug('mouseover');
-                              vm.markerDetails = {};
-                              vm.markerDetails = getMarkerDetails(model.coords);
-                              model.doShow = true;
-    //                          $scope.$apply();
+                              vm.active =  getMarkerDetails(model.coords);
+                               model.doShow = true;
                         },
                         rightclick : function (gMarker, eventName, model) {
-                            //window.alert("Marker: lat: " + model.coords.latitude + ", lon: " + model.coords.longitude + " clicked!!")
                             removeMarker(model.coords.latitude, model.coords.longitude);
                             $scope.$apply();
                         }
                     }
                 };
-
-                vm.zoom = 15;
-
                 getTheData();
             }
         }
@@ -96,6 +88,7 @@
 
 
         function onLoadComplete (response) {
+            vm.cssClass = "";
             vm.markers = [];
             vm.markersAttributes = [];
             if(response.length > 0) {
@@ -125,28 +118,26 @@
                 attributes.canDelete = true;
                 vm.markersAttributes.push(attributes);
             }
+
         }
 
         function onLoadError(response) {
 
         }
 
-        function addCoordinates() {
-            var coordiates = {};
-            coordiates.latitude =  vm.marker.coords.latitude;
-            coordiates.longitude = vm.marker.coords.longitude;
-            coordiates.name = vm.marker.name;
-            coordiates.description = vm.marker.description;
-            coordiates.city = vm.marker.city;
-
+        function addCoordinates(who) {
+        //who - contine ce vrem sa adaugam
+        // vm.markers - contine tot ce avem pana acum
             MainService
-                .addCoordinates(coordiates)
+                .addCoordinates(who)
                 .then(onAddComplete, onAddError);
         }
 
         function onAddComplete(response) {
             vm.message = "Datele au fost salvate cu succes in baza de date!";
-            vm.cssClass = "ok";
+            vm.cssClass = "dataAdded";
+            $scope.$apply();
+
             getTheData();
         }
 
@@ -179,5 +170,6 @@
             }
             return null;
         }
+
     }
 })();
