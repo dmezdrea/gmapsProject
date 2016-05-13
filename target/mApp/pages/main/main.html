@@ -1,3 +1,13 @@
 <div class="container">
-  Hello to my application {{::$storage.user.name}} !
+  <div align="right">
+    <span class="welcomeText" ng-if="$storage.user.name">Bine ai venit, utilizator:&nbsp;<span class="welcomeText boldText">{{::$storage.user.name}}</span> !</span>
+  </div>
+  <div class="homeContainer">
+    <div>
+      <span class="homeText">Bine ati venit in aplicatia WEB - Google Maps</span>
+      <br>
+      <span class="homeText">Pentru a accesa harta va rugam sa apasati pe butonul Map din meniul de mai sus.</span>
+    </div>
+    <div class="homePicture">&nbsp;</div>
+  </div>
 </div>

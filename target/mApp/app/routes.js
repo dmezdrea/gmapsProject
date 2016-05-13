@@ -14,6 +14,11 @@
 				controller:	'LogInCtrl',
 				controllerAs: 'login'
 			}).
+			when('/logout', {
+				templateUrl: 'pages/map/logout.html',
+				controller:	'LogOutCtrl',
+				controllerAs: 'logout'
+			}).
 	    	when('/home', {
 	    		templateUrl: 'pages/main/main.html',
 	    		controller:	'MainCtrl',

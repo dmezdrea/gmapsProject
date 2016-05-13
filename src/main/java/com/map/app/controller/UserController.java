@@ -23,6 +23,14 @@ public class UserController {
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public User insert(@RequestBody User user) {
         try {
+            if(user.getUserName().equals(userService.getUserByUserName(user.getUserName()).getUserName()) || user.getEmail().equals(userService.getUserByEmail(user.getEmail()).getEmail())) {
+                return null;
+            }
+
+//            if(userService.getUserByUserName(user.getUserName()).getUserName() == user.getUserName()) {
+//                return null;
+//            }
+
             User newUser = user;
             Status status = statusService.getStatusById(1);
             newUser.setStatus(status);

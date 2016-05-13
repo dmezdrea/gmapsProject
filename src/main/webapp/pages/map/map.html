@@ -36,11 +36,11 @@
                                 <table  class="newItem" border="0" ng-show="!(coords.id > 0)" ng-init="theObject = {latitude: coords.latitude, longitude: coords.longitude}">
                                     <tr>
                                         <td>Latitudine:</td>
-                                        <td><input type="text" name="latitude" ng-model="theObject.latitude"/></td>
+                                        <td><input type="text" name="latitude" ng-model="theObject.latitude" readonly/></td>
                                     </tr>
                                     <tr>
                                         <td>Longitudine:</td>
-                                        <td><input type="text" name="longitude" ng-model="theObject.longitude"/></td>
+                                        <td><input type="text" name="longitude" ng-model="theObject.longitude" readonly/></td>
                                     </tr>
                                     <tr>
                                         <td>Nume:</td>

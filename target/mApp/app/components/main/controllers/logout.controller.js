@@ -3,15 +3,15 @@
 
     angular
         .module('app')
-        .controller('LogInCtrl', LogInCtrl);
+        .controller('LogOutCtrl', LogOutCtrl);
 
-    LogInCtrl.$inject = ['$scope', '$location', '$localStorage'];
-    function LogInCtrl($scope, $location, $localStorage) {
+    LogOutCtrl.$inject = ['$scope', '$location', '$localStorage', 'commonService'];
+    function LogOutCtrl($scope, $location, $localStorage, commonService) {
 
         var vm = this;
 
         // Fields
-        //$scope.$storage = $localStorage;
+        $scope.$storage = $localStorage;
 
         //Methods
         vm.logout = logout;
@@ -23,9 +23,10 @@
         }
 
         function logout() {
-            //if(typeof $scope.$storage.user === 'undefined' || typeof $scope.$storage.user.name === 'undefined' || $scope.$storage.user.name === null) {
-            //    $location.path("/logout");
-            //}
+            if(commonService.isUserLogged()) {
+                commonService.logOut();
+            }
+            $location.path("/login");
         }
     }
 })();

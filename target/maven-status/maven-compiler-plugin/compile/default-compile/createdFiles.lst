@@ -6,6 +6,7 @@ com\map\app\DAO\CoordinatesDAO.class
 com\map\app\service\Impl\CoordinatesServiceImpl.class
 com\map\app\service\Impl\UserServiceImpl.class
 com\map\app\service\UserService.class
+com\map\app\controller\ApplicationController.class
 com\map\app\DAO\Impl\CoordinatesDAOImpl.class
 com\map\app\service\Impl\StatusServiceImpl.class
 com\map\app\controller\CoordinatesController.class

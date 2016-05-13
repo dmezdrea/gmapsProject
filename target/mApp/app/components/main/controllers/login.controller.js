@@ -5,8 +5,8 @@
         .module('app')
         .controller('LogInCtrl', LogInCtrl);
 
-    LogInCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'md5'];
-    function LogInCtrl($scope, $location, $localStorage, MainService, md5) {
+    LogInCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'commonService', 'md5'];
+    function LogInCtrl($scope, $location, $localStorage, MainService, commonService, md5) {
 
         var vm = this;
 
@@ -50,14 +50,14 @@
                 return;
             }
 
-            //$scope.$storage.user = response;
+            $scope.$storage.user = response;
 
             vm.message = "Salut " + $scope.$storage.user.name + " !";
             vm.cssClass = "";
 
-            //if(typeof $scope.$storage.user !== 'undefined' && typeof $scope.$storage.user.name !== 'undefined' && $scope.$storage.user.name !== null) {
-            //    $location.path("/home");
-            //}
+            if(commonService.isUserLogged()) {
+                $location.path("/home");
+            }
         }
 
         function onAuthenticateError(response) {

@@ -25,4 +25,16 @@ public class UserServiceImpl implements UserService {
     public void insertUser(User user) {
         userDAO.insertUser(user);
     }
+
+    @Override
+    @Transactional
+    public User getUserByEmail(String email) {
+        return userDAO.getUserByEmail(email);
+    }
+
+    @Override
+    @Transactional
+    public User getUserByUserName(String userName) {
+        return userDAO.getUserByUserName(userName);
+    }
 }

@@ -23,4 +23,16 @@ public class UserDAOImpl implements UserDAO {
     public void insertUser(User user) {
         sessionFactory.getCurrentSession().saveOrUpdate(user);
     }
+
+    @Override
+    public User getUserByEmail(String email) {
+        User user = (User) sessionFactory.getCurrentSession().createCriteria(User.class).add(Restrictions.eq("email", email)).uniqueResult();
+        return user;
+    }
+
+    @Override
+    public User getUserByUserName(String userName) {
+        User user = (User) sessionFactory.getCurrentSession().createCriteria(User.class).add(Restrictions.eq("userName", userName)).uniqueResult();
+        return user;
+    }
 }

@@ -5,13 +5,13 @@
         .module('app')
         .controller('RegisterCtrl', RegisterCtrl);
 
-    RegisterCtrl.$inject = ['$scope', '$localStorage', 'MainService', 'md5'];
-    function RegisterCtrl($scope, $localStorage, MainService, md5) {
+    RegisterCtrl.$inject = ['$scope', '$localStorage', 'MainService', 'md5', '$location', '$timeout'];
+    function RegisterCtrl($scope, $localStorage, MainService, md5, $location, $timeout) {
 
         var vm = this;
 
         // Fields
-        //$scope.$storage = $localStorage;
+        $scope.$storage = $localStorage;
         vm.form = {};
         vm.form.email = "";
         vm.form.name = "";
@@ -74,13 +74,26 @@
         }
 
         function onAddComplete(response) {
+            if(response === null) {
+                vm.message = "Utilizatorul nu poate fi adaugat! Probabil exista deja un cont cu adresa de email introdusa sau cu numele de utilizator!";
+                vm.cssClass = "error";
+            }
+
             vm.message = "Utilizatorul a fost adaugat cu succes!";
             vm.cssClass = "ok";
+
+            resetForm();
+
+            $timeout(gotoLogin, 4000);
         }
 
         function onAddError() {
             vm.message = "A aparut o eroare la salvarea utilizatorului!";
             vm.cssClass = "error";
+        }
+
+        function gotoLogin() {
+            $location.path("/login");
         }
     }
 })();

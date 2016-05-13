@@ -9,7 +9,7 @@
     function MenuController($scope, $localStorage) {
 
         var vm = this;
-        //$scope.$storage = $localStorage;
+        $scope.$storage = $localStorage;
     }
 
 })();

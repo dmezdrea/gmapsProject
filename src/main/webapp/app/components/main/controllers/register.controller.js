@@ -74,6 +74,12 @@
         }
 
         function onAddComplete(response) {
+            if(response === null || response === "") {
+                vm.message = "User sau email deja utilizate!";
+                vm.cssClass = "error";
+                return;
+            }
+
             vm.message = "Utilizatorul a fost adaugat cu succes!";
             vm.cssClass = "ok";
 

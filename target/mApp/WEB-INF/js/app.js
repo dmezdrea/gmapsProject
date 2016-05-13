@@ -51,10 +51,38 @@
 
     angular
         .module('app')
+        .service('commonService', commonService);
+
+    commonService.$inject = ['$localStorage'];
+    function commonService($localStorage) {
+
+        var common = {
+            isUserLogged: isUserLogged,
+            logOut: logOut
+        };
+
+        function isUserLogged() {
+            return typeof $localStorage.user !== 'undefined' && typeof $localStorage.user.name !== 'undefined' && $localStorage.user.name !== null;
+        }
+
+        function logOut() {
+            if(isUserLogged()) {
+                delete $localStorage.user;
+            }
+        }
+
+        return common;
+    }
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
         .controller('LogInCtrl', LogInCtrl);
 
-    LogInCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'md5'];
-    function LogInCtrl($scope, $location, $localStorage, MainService, md5) {
+    LogInCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'commonService', 'md5'];
+    function LogInCtrl($scope, $location, $localStorage, MainService, commonService, md5) {
 
         var vm = this;
 
@@ -103,7 +131,7 @@
             vm.message = "Salut " + $scope.$storage.user.name + " !";
             vm.cssClass = "";
 
-            if(typeof $scope.$storage.user !== 'undefined' && typeof $scope.$storage.user.name !== 'undefined' && $scope.$storage.user.name !== null) {
+            if(commonService.isUserLogged()) {
                 $location.path("/home");
             }
         }
@@ -119,10 +147,10 @@
 
     angular
         .module('app')
-        .controller('LogInCtrl', LogInCtrl);
+        .controller('LogOutCtrl', LogOutCtrl);
 
-    LogInCtrl.$inject = ['$scope', '$location', '$localStorage'];
-    function LogInCtrl($scope, $location, $localStorage) {
+    LogOutCtrl.$inject = ['$scope', '$location', '$localStorage', 'commonService'];
+    function LogOutCtrl($scope, $location, $localStorage, commonService) {
 
         var vm = this;
 
@@ -139,9 +167,10 @@
         }
 
         function logout() {
-            if(typeof $scope.$storage.user === 'undefined' || typeof $scope.$storage.user.name === 'undefined' || $scope.$storage.user.name === null) {
-                $location.path("/logout");
+            if(commonService.isUserLogged()) {
+                commonService.logOut();
             }
+            $location.path("/login");
         }
     }
 })();
@@ -171,8 +200,8 @@
         .module('app')
         .controller('MapCtrl', MapCtrl);
 
-    MapCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService'];
-    function MapCtrl($scope, $location, $localStorage, MainService) {
+    MapCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'commonService'];
+    function MapCtrl($scope, $location, $localStorage, MainService, commonService) {
 
         var vm = this;
 
@@ -186,13 +215,13 @@
         };
         vm.zoom = 15;
         vm.marker = {};
+        vm.activeMarker = {};
         vm.events = {
             click: function (map, eventName, originalEventArgs) {
                 var e = originalEventArgs[0];
-                vm.marker.coords = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
                 vm.markers.push({latitude: e.latLng.lat(), longitude: e.latLng.lng()});
                 var attributes = {};
-                attributes.marker = {latitude: e.latLng.lat(), longitude: e.latLng.lng()};
+                attributes.marker = {latitude: e.latLng.lat(), longitude: e.latLng.lng(), id: -1};
                 attributes.canDelete = true;
                 vm.markersAttributes.push(attributes);
                 $scope.$apply();
@@ -213,58 +242,60 @@
         activate();
 
         function activate() {
-            if(typeof $scope.$storage.user === 'undefined' || typeof $scope.$storage.user.name === 'undefined' || $scope.$storage.user.name === null) {
+            if(!commonService.isUserLogged()) {
                 $location.path("/login");
             } else {
                 vm.center = {
                     latitude: 44.435730,
                     longitude: 26.048109
                 };
+                vm.zoom = 15;
+                vm.active = {};
+                vm.mapOptions = {
+                    addCoordinates: addCoordinates
+                };
+
+                $scope.$root.addCoordinates = addCoordinates;
 
                 vm.marker = {
-                    coords: {
-                        latitude: 44.435730,
-                        longitude: 26.048109
-                    },
-                    name: '',
-                    description: '',
-                    city: '',
-
                     key: 1,
                     events: {
                         click: function (gMarker, eventName, model) {
-                              console.debug('mouseover');
-                              vm.markerDetails = {};
-                              vm.markerDetails = getMarkerDetails(model.coords);
-                              model.doShow = true;
-    //                          $scope.$apply();
+                              vm.active =  getMarkerDetails(model.coords);
+                               model.doShow = true;
                         },
                         rightclick : function (gMarker, eventName, model) {
-                            //window.alert("Marker: lat: " + model.coords.latitude + ", lon: " + model.coords.longitude + " clicked!!")
                             removeMarker(model.coords.latitude, model.coords.longitude);
                             $scope.$apply();
                         }
                     }
                 };
-
-                vm.zoom = 15;
-
-                MainService
-                    .getAllCoordinates()
-                    .then(onLoadComplete, onLoadError);
+                getTheData();
             }
         }
 
+           function getTheData(){
+            MainService
+               .getAllCoordinates()
+               .then(onLoadComplete, onLoadError);
+
+           }
+
+
         function onLoadComplete (response) {
+            vm.cssClass = "";
+            vm.markers = [];
+            vm.markersAttributes = [];
             if(response.length > 0) {
                 var marker = {};
                 var attributes = {};
                 for (var i = 0; i < response.length; i++) {
                     marker = {};
                     attributes = {};
-                    marker.latitude = response[i].latitude;
-                    marker.longitude = response[i].longitude;
-                    vm.markers.push(marker);
+//                    marker.latitude = response[i].latitude;
+//                    marker.longitude = response[i].longitude;
+
+                    vm.markers.push(response[i]);
 
                     attributes.marker = response[i];
                     attributes.canDelete = false;
@@ -282,28 +313,27 @@
                 attributes.canDelete = true;
                 vm.markersAttributes.push(attributes);
             }
+
         }
 
         function onLoadError(response) {
 
         }
 
-        function addCoordinates() {
-            var coordiates = {};
-            coordiates.latitude =  vm.marker.coords.latitude;
-            coordiates.longitude = vm.marker.coords.longitude;
-            coordiates.name = vm.marker.name;
-            coordiates.description = vm.marker.description;
-            coordiates.city = vm.marker.city;
-
+        function addCoordinates(who) {
+        //who - contine ce vrem sa adaugam
+        // vm.markers - contine tot ce avem pana acum
             MainService
-                .addCoordinates(coordiates)
+                .addCoordinates(who)
                 .then(onAddComplete, onAddError);
         }
 
         function onAddComplete(response) {
             vm.message = "Datele au fost salvate cu succes in baza de date!";
-            vm.cssClass = "ok";
+            vm.cssClass = "dataAdded";
+            $scope.$apply();
+
+            getTheData();
         }
 
         function onAddError() {
@@ -335,6 +365,7 @@
             }
             return null;
         }
+
     }
 })();
 (function() {
@@ -359,8 +390,8 @@
         .module('app')
         .controller('RegisterCtrl', RegisterCtrl);
 
-    RegisterCtrl.$inject = ['$scope', '$localStorage', 'MainService', 'md5'];
-    function RegisterCtrl($scope, $localStorage, MainService, md5) {
+    RegisterCtrl.$inject = ['$scope', '$localStorage', 'MainService', 'md5', '$location', '$timeout'];
+    function RegisterCtrl($scope, $localStorage, MainService, md5, $location, $timeout) {
 
         var vm = this;
 
@@ -428,13 +459,26 @@
         }
 
         function onAddComplete(response) {
+            if(response === null) {
+                vm.message = "Utilizatorul nu poate fi adaugat! Probabil exista deja un cont cu adresa de email introdusa sau cu numele de utilizator!";
+                vm.cssClass = "error";
+            }
+
             vm.message = "Utilizatorul a fost adaugat cu succes!";
             vm.cssClass = "ok";
+
+            resetForm();
+
+            $timeout(gotoLogin, 4000);
         }
 
         function onAddError() {
             vm.message = "A aparut o eroare la salvarea utilizatorului!";
             vm.cssClass = "error";
+        }
+
+        function gotoLogin() {
+            $location.path("/login");
         }
     }
 })();
@@ -516,6 +560,11 @@
 				templateUrl: 'pages/map/login.html',
 				controller:	'LogInCtrl',
 				controllerAs: 'login'
+			}).
+			when('/logout', {
+				templateUrl: 'pages/map/logout.html',
+				controller:	'LogOutCtrl',
+				controllerAs: 'logout'
 			}).
 	    	when('/home', {
 	    		templateUrl: 'pages/main/main.html',

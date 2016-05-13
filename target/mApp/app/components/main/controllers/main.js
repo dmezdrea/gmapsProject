@@ -9,7 +9,7 @@
 	function MainCtrl($scope, $localStorage) {
 
 		var vm = this;
-		//$scope.$storage = $localStorage;
+		$scope.$storage = $localStorage;
 
 		vm.viewLocation = 'webapp/templates/main/main.html';
 
