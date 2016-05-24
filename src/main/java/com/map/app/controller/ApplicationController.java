@@ -20,7 +20,7 @@ public class ApplicationController {
 
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public Coordinates insert(@RequestBody Coordinates coordinates) {
-		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude(), coordinates.getName(), coordinates.getDescription(), coordinates.getCity());
+		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude(), coordinates.getName(), coordinates.getDescription(), coordinates.getCity(), coordinates.getIcon());
 //		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude());
 		coordinatesService.insert(newCoordinates);
 		return newCoordinates;

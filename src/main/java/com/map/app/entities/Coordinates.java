@@ -16,18 +16,20 @@ public class Coordinates {
     private String name;
     private String description;
     private String city;
+    private String icon;
 
     public Coordinates(String latitude, String longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    public Coordinates(String latitude, String longitude, String name, String description, String city) {
+    public Coordinates(String latitude, String longitude, String name, String description, String city, String icon) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.name = name;
         this.description = description;
         this.city = city;
+        this.icon = icon;
     }
 
     public Coordinates() {
@@ -79,5 +81,13 @@ public class Coordinates {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }

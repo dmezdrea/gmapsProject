@@ -12,6 +12,136 @@
 
         //Constants
 
+
+vm.theIcons = {
+"accountancy":{
+"label": "Accountancy",
+"path":"images/map-icons/accountancy.png"
+},
+"arts-crafts":{
+"label": "Arts-crafts",
+"path":"images/map-icons/arts-crafts.png"
+},
+"astrology":{
+"label": "Astrology",
+"path":"images/map-icons/astrology.png"
+},
+"automotive":{
+"label": "Automotive",
+"path":"images/map-icons/automotive.png"
+},
+"bars":{
+"label": "Bars",
+"path":"images/map-icons/bars.png"
+},
+"birds":{
+"label": "Birds",
+"path":"images/map-icons/birds.png"
+},
+"books-media":{
+"label": "Books-media",
+"path":"images/map-icons/books-media.png"
+},
+"breakfast-n-brunch":{
+"label": "Breakfast-n-brunch",
+"path":"images/map-icons/breakfast-n-brunch.png"
+},
+"business":{
+"label": "Business",
+"path":"images/map-icons/business.png"
+},
+"cake-shop":{
+"label": "Cake-shop",
+"path":"images/map-icons/cake-shop.png"
+},
+"clothings":{
+"label": "Clothings",
+"path":"images/map-icons/clothings.png"
+},
+"clubs.png":{
+"label": "Clubs.png",
+"path":"images/map-icons/clubs.png.png"
+},
+"coffee-n-tea":{
+"label": "Coffee-n-tea",
+"path":"images/map-icons/coffee-n-tea.png"
+},
+"commercial-places":{
+"label": "Commercial-places",
+"path":"images/map-icons/commercial-places.png"
+},
+"community":{
+"label": "Community",
+"path":"images/map-icons/community.png"
+},
+"computers":{
+"label": "Computers",
+"path":"images/map-icons/computers.png"
+},
+"concerts":{
+"label": "Concerts",
+"path":"images/map-icons/concerts.png"
+},
+"cookbooks":{
+"label": "Cookbooks",
+"path":"images/map-icons/cookbooks.png"
+},
+"dance-clubs":{
+"label": "Dance-clubs",
+"path":"images/map-icons/dance-clubs.png"
+},
+"default":{
+"label": "Default",
+"path":"images/map-icons/default.png"
+},
+"dental":{
+"label": "Dental",
+"path":"images/map-icons/dental.png"
+},
+"doctors":{
+"label": "Doctors",
+"path":"images/map-icons/doctors.png"
+},
+"education":{
+"label": "Education",
+"path":"images/map-icons/education.png"
+},
+"electronics":{
+"label": "Electronics",
+"path":"images/map-icons/electronics.png"
+},
+"employment":{
+"label": "Employment",
+"path":"images/map-icons/employment.png"
+},
+"engineering":{
+"label": "Engineering",
+"path":"images/map-icons/engineering.png"
+},
+"entertainment":{
+"label": "Entertainment",
+"path":"images/map-icons/entertainment.png"
+},
+"event":{
+"label": "Event",
+"path":"images/map-icons/event.png"
+},
+"exhibitions":{
+"label": "Exhibitions",
+"path":"images/map-icons/exhibitions.png"
+},
+"fashion":{
+"label": "Fashion",
+"path":"images/map-icons/fashion.png"
+}
+
+
+}
+
+
+
+
+
         //Fields
         $scope.$storage = $localStorage;
         vm.center = {
@@ -99,7 +229,7 @@
                     attributes = {};
 //                    marker.latitude = response[i].latitude;
 //                    marker.longitude = response[i].longitude;
-
+                    response[i].options = {"icon": vm.theIcons[response[i].icon && response[i].icon || "event"].path}
                     vm.markers.push(response[i]);
 
                     attributes.marker = response[i];
@@ -118,7 +248,6 @@
                 attributes.canDelete = true;
                 vm.markersAttributes.push(attributes);
             }
-
         }
 
         function onLoadError(response) {
@@ -128,6 +257,7 @@
         function addCoordinates(who) {
         //who - contine ce vrem sa adaugam
         // vm.markers - contine tot ce avem pana acum
+        who.icon = "education";
             MainService
                 .addCoordinates(who)
                 .then(onAddComplete, onAddError);
