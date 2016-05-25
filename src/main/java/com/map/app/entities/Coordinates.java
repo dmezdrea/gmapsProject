@@ -17,19 +17,21 @@ public class Coordinates {
     private String description;
     private String city;
     private String icon;
+    private String owner;
 
     public Coordinates(String latitude, String longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    public Coordinates(String latitude, String longitude, String name, String description, String city, String icon) {
+    public Coordinates(String latitude, String longitude, String name, String description, String city, String icon, String owner) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.name = name;
         this.description = description;
         this.city = city;
         this.icon = icon;
+        this.owner = owner;
     }
 
     public Coordinates() {
@@ -90,4 +92,13 @@ public class Coordinates {
     public void setIcon(String icon) {
         this.icon = icon;
     }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
 }

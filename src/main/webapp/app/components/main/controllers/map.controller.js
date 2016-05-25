@@ -11,20 +11,19 @@
         var vm = this;
 
         //Constants
-
-
-vm.theIcons = {
+$scope.config = {};
+$scope.config.theIcons = {
 "accountancy":{
-"label": "Accountancy",
-"path":"images/map-icons/accountancy.png"
+    "label": "Accountancy",
+    "path":"images/map-icons/accountancy.png"
 },
 "arts-crafts":{
-"label": "Arts-crafts",
-"path":"images/map-icons/arts-crafts.png"
+    "label": "Arts-crafts",
+    "path":"images/map-icons/arts-crafts.png"
 },
 "astrology":{
-"label": "Astrology",
-"path":"images/map-icons/astrology.png"
+    "label": "Astrology",
+    "path":"images/map-icons/astrology.png"
 },
 "automotive":{
 "label": "Automotive",
@@ -154,7 +153,7 @@ vm.theIcons = {
         vm.events = {
             click: function (map, eventName, originalEventArgs) {
                 var e = originalEventArgs[0];
-                vm.markers.push({latitude: e.latLng.lat(), longitude: e.latLng.lng()});
+                vm.markers.push({"latitude": e.latLng.lat(), "longitude": e.latLng.lng()});
                 var attributes = {};
                 attributes.marker = {latitude: e.latLng.lat(), longitude: e.latLng.lng(), id: -1};
                 attributes.canDelete = true;
@@ -190,8 +189,6 @@ vm.theIcons = {
                     addCoordinates: addCoordinates
                 };
 
-                $scope.$root.addCoordinates = addCoordinates;
-
                 vm.marker = {
                     key: 1,
                     events: {
@@ -207,6 +204,17 @@ vm.theIcons = {
                 };
                 getTheData();
             }
+        }
+
+        $scope.$root.deleteCoordinates = deleteCoordinates;
+        $scope.$root.addCoordinates = addCoordinates;
+
+        function deleteCoordinates(who){
+                MainService
+                    .deleteCoordinates(who)
+                    .then(function(){
+                        console.log("complete");
+                    });
         }
 
            function getTheData(){
@@ -227,27 +235,16 @@ vm.theIcons = {
                 for (var i = 0; i < response.length; i++) {
                     marker = {};
                     attributes = {};
-//                    marker.latitude = response[i].latitude;
-//                    marker.longitude = response[i].longitude;
-                    response[i].options = {"icon": vm.theIcons[response[i].icon && response[i].icon || "event"].path}
+                    response[i].options = {"icon": $scope.config.theIcons[response[i].icon && response[i].icon || "event"].path}
+                    response[i].canDelete = $scope.$storage.user.userName == response[i].owner || $scope.$storage.user.status.type == "admin";
                     vm.markers.push(response[i]);
 
                     attributes.marker = response[i];
                     attributes.canDelete = false;
                     vm.markersAttributes.push(attributes);
                 }
-            } else {
-                vm.markers = [
-                    {
-                        latitude: 44.435730,
-                        longitude: 26.048109
-                    }
-                ];
-                var attributes = {};
-                attributes.marker = vm.markers[0];
-                attributes.canDelete = true;
-                vm.markersAttributes.push(attributes);
             }
+
         }
 
         function onLoadError(response) {
@@ -257,7 +254,7 @@ vm.theIcons = {
         function addCoordinates(who) {
         //who - contine ce vrem sa adaugam
         // vm.markers - contine tot ce avem pana acum
-        who.icon = "education";
+        who.owner = $scope.$storage.user.userName;
             MainService
                 .addCoordinates(who)
                 .then(onAddComplete, onAddError);

@@ -3,10 +3,7 @@ package com.map.app.controller;
 import com.map.app.entities.Coordinates;
 import com.map.app.service.CoordinatesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +17,7 @@ public class CoordinatesController {
 
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public Coordinates insert(@RequestBody Coordinates coordinates) {
-		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude(), coordinates.getName(), coordinates.getDescription(), coordinates.getCity(), coordinates.getIcon());
+		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude(), coordinates.getName(), coordinates.getDescription(), coordinates.getCity(), coordinates.getIcon(), coordinates.getOwner());
 //		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude());
 		coordinatesService.insert(newCoordinates);
 		return newCoordinates;

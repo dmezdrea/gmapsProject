@@ -31,8 +31,8 @@
                                     <div>Nume: {{coords.name}}</div>
                                     <div>Oras: {{coords.city}}</div>
                                     <div>Descriere: {{coords.description}}</div>
+                                    <div style="margin-top:30px;" ng-if="coords.canDelete"><button ng-click="$root.deleteCoordinates(coords);">Delete marker</button></div>
                                 </div>
-                                {{map.theIcons[coords.icon].path}}
                                 <table  class="newItem" border="0" ng-show="!(coords.id > 0)" ng-init="theObject = {latitude: coords.latitude, longitude: coords.longitude}">
                                     <tr>
                                         <td>Latitudine:</td>
@@ -57,7 +57,14 @@
                                     <tr>
                                         <td>Categorie:</td>
                                         <td>
-                                            <input type="text" name="category" ng-model="theObject.icon"/>
+                                            <select ng-model="theObject.icon"
+                                            ng-change="">
+                                                <option value="">Choose an option</option>
+                                                <option value="accountancy">Accountancy</option>
+                                                <option value="arts-crafts">Arts-crafts</option>
+                                                <option value="astrology">Astrology</option>
+                                                <option value="automotive">Automotive</option>
+                                            </select>
                                         </td>
                                     </tr>
                                     <tr>

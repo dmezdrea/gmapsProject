@@ -10,6 +10,7 @@
 
 		var service = {
 			addCoordinates: addCoordinates,
+			deleteCoordinates: deleteCoordinates,
 			getAllCoordinates: getAllCoordinates,
 			authenticate: authenticate,
 			addUser: addUser
@@ -18,6 +19,10 @@
 		function addCoordinates(data) {
 			return handleRequest('/coordinates/insert', data);
 		}
+
+        function deleteCoordinates(data) {
+            return handleRequest('/coordinates/delete', data);
+        }
 
 		function getAllCoordinates() {
 			return handleRequest('/coordinates/all');

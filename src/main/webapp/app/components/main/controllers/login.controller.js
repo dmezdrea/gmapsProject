@@ -54,7 +54,7 @@
 
             vm.message = "Salut " + $scope.$storage.user.name + " !";
             vm.cssClass = "";
-
+            console.log($scope.$storage)
             if(commonService.isUserLogged()) {
                 $location.path("/home");
             }
