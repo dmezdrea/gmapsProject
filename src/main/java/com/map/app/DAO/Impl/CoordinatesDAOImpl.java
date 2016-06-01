@@ -19,6 +19,11 @@ public class CoordinatesDAOImpl implements CoordinatesDAO {
         sessionFactory.getCurrentSession().saveOrUpdate(coordinates);
     }
 
+    @Override
+    public void delete(Coordinates coordinates) {
+        sessionFactory.getCurrentSession().delete(coordinates);
+    }
+
 
     @Override
     public List<Coordinates> getAllCoordinates() {

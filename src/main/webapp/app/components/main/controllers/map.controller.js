@@ -5,13 +5,13 @@
         .module('app')
         .controller('MapCtrl', MapCtrl);
 
-    MapCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'commonService'];
-    function MapCtrl($scope, $location, $localStorage, MainService, commonService) {
+    MapCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'commonService', '$filter'];
+    function MapCtrl($scope, $location, $localStorage, MainService, commonService, $filter) {
 
         var vm = this;
 
         //Constants
-$scope.config = {};
+        $scope.config = {};
 $scope.config.theIcons = {
 "accountancy":{
     "label": "Accountancy",
@@ -137,7 +137,7 @@ $scope.config.theIcons = {
 
 }
 
-
+$scope.config.filters = {mine: false};
 
 
 
@@ -172,6 +172,10 @@ $scope.config.theIcons = {
 
         //Methods
         vm.addCoordinates = addCoordinates;
+        vm.applyFilters = function(){
+            vm.markers = $filter('filter')(vm.markersBackup, {"owner": ($scope.config.filters.mine ? $scope.$storage.user.name:"")});
+            console.log("aa")
+        }
 
         activate();
 
@@ -213,7 +217,10 @@ $scope.config.theIcons = {
                 MainService
                     .deleteCoordinates(who)
                     .then(function(){
-                        console.log("complete");
+                        getTheData();
+                        //console.log("complete");
+                    },function(error){
+                    //console.log("error!")
                     });
         }
 
@@ -245,6 +252,8 @@ $scope.config.theIcons = {
                 }
             }
 
+            vm.markersBackup = JSON.parse(JSON.stringify(vm.markers));
+            vm.applyFilters();
         }
 
         function onLoadError(response) {

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/coordinates/")
+@RequestMapping("/coordinates")
 public class CoordinatesController {
 
 	@Autowired
@@ -21,6 +21,14 @@ public class CoordinatesController {
 //		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude());
 		coordinatesService.insert(newCoordinates);
 		return newCoordinates;
+	}
+
+	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+	public void delete(@RequestBody Coordinates coordinates) {
+		System.out.println(coordinates.toString());
+		Coordinates newCoordinates = new Coordinates(coordinates.getId(), coordinates.getLatitude(), coordinates.getLongitude(), coordinates.getName(), coordinates.getDescription(), coordinates.getCity(), coordinates.getIcon(), coordinates.getOwner());
+//		Coordinates newCoordinates = new Coordinates(coordinates.getLatitude(), coordinates.getLongitude());
+		coordinatesService.delete(newCoordinates);
 	}
 
 	@RequestMapping(value = "/all", method = RequestMethod.POST)

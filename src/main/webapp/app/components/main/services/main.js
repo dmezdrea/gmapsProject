@@ -16,12 +16,13 @@
 			addUser: addUser
 		};
 
+
 		function addCoordinates(data) {
 			return handleRequest('/coordinates/insert', data);
 		}
 
         function deleteCoordinates(data) {
-            return handleRequest('/coordinates/delete', data);
+            return handleDeleteRequest('/coordinates/delete', data);
         }
 
 		function getAllCoordinates() {
@@ -36,12 +37,45 @@
 			return handleRequest('/user/insert', data);
 		}
 
+        function handleDeleteRequest(url, data) {
+            var deferred = $q.defer();
+			var coord = data;
+			delete coord.canDelete;
+			delete coord.options;
+            $http({
+              method: 'DELETE',
+              url: "http://localhost:8000/mApp" + url,
+              data: coord,
+              headers: {'Content-Type' : 'application/json'}
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                 deferred.resolve(data);
+                 console.log("Success Service!");
+              }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                deferred.reject(data);
+                console.log("Service" + response.status);
+              });
+//            $http
+//                .delete("http://localhost:8090/mApp" + url, data)
+//                .success(function(data, status, headers, config) {
+//                    deferred.resolve(data);
+//                })
+//                .error(function(data, status, headers, config) {
+//                    deferred.reject(data);
+//                });
+
+            return deferred.promise;
+        }
+
 		function handleRequest(url, data) {
 			var deferred = $q.defer();
 
 			$http
 //				.post(getBaseURL() + url, data)
-				.post("http://localhost:8090/mApp" + url, data)
+				.post("http://localhost:8000/mApp" + url, data)
 				.success(function(data, status, headers, config) {
 					deferred.resolve(data);
 				})

@@ -64,15 +64,16 @@ a {
 }
 .header {
 	width:960px;
-	height:180px;
 	overflow:hidden;
 	margin:0 auto;
 }
-.logo {
-	width:380px;
-	height:180px;
+
+.theLogo{
     float:left;
-    background:url(../images/logo.jpg);
+}
+.theLogo img{
+    width:100px;
+    height:100px;
 }
 .logo h1 {
 	font-size:40px;
@@ -84,15 +85,13 @@ a {
 /* Menu starts here */
 
 .menu {
-	width:580px;
-	float:left;
-	padding-top:90px;
+	float:left
 }
 .menu ul {
 	list-style:none;
 }
 .menu li {
-	float:left;
+	display:inline-block;
 	text-align:center;
 	line-height:90px;
 	width:95px;
@@ -138,11 +137,11 @@ a {
 }
 .banner-image {
 	width:950px;
-	height:625px;
 	padding:10px;
 	background:#d0d0c5;
 	margin-top:60px;
 	margin-bottom:60px;
+	display:table;
 }
 
 /* Body Content starts here */
@@ -426,5 +425,20 @@ a.createLink {
 }
 
 
+#mapContainer{
+    display:table-cell;
+    vertical-align:top;
+    width:80%;
+}
+.mapFilters{
+    vertical-align:top;
+    display:table-cell;
+    width:20%;
+    padding:10px;
+}
 
+.mapFilters > input{
+    position: relative;
+    top: 2px;
+}
 

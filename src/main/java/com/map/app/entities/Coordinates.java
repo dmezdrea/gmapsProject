@@ -19,9 +19,15 @@ public class Coordinates {
     private String icon;
     private String owner;
 
-    public Coordinates(String latitude, String longitude) {
+    public Coordinates(Integer id, String latitude, String longitude, String name, String description, String city, String icon, String owner) {
+        this.id = id;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.name = name;
+        this.description = description;
+        this.city = city;
+        this.icon = icon;
+        this.owner = owner;
     }
 
     public Coordinates(String latitude, String longitude, String name, String description, String city, String icon, String owner) {

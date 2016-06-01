@@ -23,6 +23,13 @@ public class CoordinatesServiceImpl implements CoordinatesService {
 
     @Override
     @Transactional
+    public void delete(Coordinates coordinates) {
+
+        coordinatesDAO.delete(coordinates);
+    }
+
+    @Override
+    @Transactional
     public List<Coordinates> getAllCoordinates() {
         return coordinatesDAO.getAllCoordinates();
     }

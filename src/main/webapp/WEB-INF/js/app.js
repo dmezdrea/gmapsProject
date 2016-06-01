@@ -200,13 +200,13 @@
         .module('app')
         .controller('MapCtrl', MapCtrl);
 
-    MapCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'commonService'];
-    function MapCtrl($scope, $location, $localStorage, MainService, commonService) {
+    MapCtrl.$inject = ['$scope', '$location', '$localStorage', 'MainService', 'commonService', '$filter'];
+    function MapCtrl($scope, $location, $localStorage, MainService, commonService, $filter) {
 
         var vm = this;
 
         //Constants
-$scope.config = {};
+        $scope.config = {};
 $scope.config.theIcons = {
 "accountancy":{
     "label": "Accountancy",
@@ -332,7 +332,7 @@ $scope.config.theIcons = {
 
 }
 
-
+$scope.config.filters = {mine: false};
 
 
 
@@ -367,6 +367,10 @@ $scope.config.theIcons = {
 
         //Methods
         vm.addCoordinates = addCoordinates;
+        vm.applyFilters = function(){
+            vm.markers = $filter('filter')(vm.markersBackup, {"owner": ($scope.config.filters.mine ? $scope.$storage.user.name:"")});
+            console.log("aa")
+        }
 
         activate();
 
@@ -408,7 +412,10 @@ $scope.config.theIcons = {
                 MainService
                     .deleteCoordinates(who)
                     .then(function(){
-                        console.log("complete");
+                        getTheData();
+                        //console.log("complete");
+                    },function(error){
+                    //console.log("error!")
                     });
         }
 
@@ -440,6 +447,8 @@ $scope.config.theIcons = {
                 }
             }
 
+            vm.markersBackup = JSON.parse(JSON.stringify(vm.markers));
+            vm.applyFilters();
         }
 
         function onLoadError(response) {
@@ -628,12 +637,13 @@ $scope.config.theIcons = {
 			addUser: addUser
 		};
 
+
 		function addCoordinates(data) {
 			return handleRequest('/coordinates/insert', data);
 		}
 
         function deleteCoordinates(data) {
-            return handleRequest('/coordinates/delete', data);
+            return handleDeleteRequest('/coordinates/delete', data);
         }
 
 		function getAllCoordinates() {
@@ -648,12 +658,45 @@ $scope.config.theIcons = {
 			return handleRequest('/user/insert', data);
 		}
 
+        function handleDeleteRequest(url, data) {
+            var deferred = $q.defer();
+			var coord = data;
+			delete coord.canDelete;
+			delete coord.options;
+            $http({
+              method: 'DELETE',
+              url: "http://localhost:8000/mApp" + url,
+              data: coord,
+              headers: {'Content-Type' : 'application/json'}
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                 deferred.resolve(data);
+                 console.log("Success Service!");
+              }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                deferred.reject(data);
+                console.log("Service" + response.status);
+              });
+//            $http
+//                .delete("http://localhost:8090/mApp" + url, data)
+//                .success(function(data, status, headers, config) {
+//                    deferred.resolve(data);
+//                })
+//                .error(function(data, status, headers, config) {
+//                    deferred.reject(data);
+//                });
+
+            return deferred.promise;
+        }
+
 		function handleRequest(url, data) {
 			var deferred = $q.defer();
 
 			$http
 //				.post(getBaseURL() + url, data)
-				.post("http://localhost:8090/mApp" + url, data)
+				.post("http://localhost:8000/mApp" + url, data)
 				.success(function(data, status, headers, config) {
 					deferred.resolve(data);
 				})
