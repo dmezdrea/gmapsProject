@@ -34,6 +34,11 @@
 				controller:	'RegisterCtrl',
 				controllerAs: 'reg'
 			}).
+			when('/contact', {
+				templateUrl: 'pages/map/contact.html',
+				controller: 'ContactCtrl',
+				controllerAs: 'contact'
+			}).
 	    	otherwise({
 	    		redirectTo: '/login'
 			});

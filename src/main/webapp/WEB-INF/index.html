@@ -25,14 +25,20 @@
       <!-- <h1>Google Maps</h1> -->
     </div>
     <!---logo ends here -->
-    <div class="menu" ng-controller="MenuController as menu">
-      <ul>
-        <li><a href="#/home">Home</a></li>
-        <li><a href="/mApp/#/map">Map</a></li>
-        <li><a href="#">Contact</a></li>
-        <li ng-if="!$storage.user.name"><a href="/mApp/#/login">Login</a></li>
-        <li ng-if="$storage.user.name"><a href="/mApp/#/logout">Logout</a></li>
-      </ul>
+    <div ng-controller="MenuController as menu">
+      <div class="menu">
+        <ul>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="/mApp/#/map">Map</a></li>
+          <li><a href="/mApp/#/contact">Contact</a></li>
+          <li ng-if="!$storage.user.name"><a href="/mApp/#/login">Login</a></li>
+          <li ng-if="$storage.user.name"><a href="/mApp/#/logout">Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="loggedUser" align="right" ng-if="$storage.user.userName">
+        <span class="welcomeText">Utilizator activ:&nbsp;<span class="welcomeText boldText">{{::$storage.user.name}}</span> !</span>
+      </div>
     </div>
     <!--- menu ends here -->
   </div>
@@ -61,12 +67,6 @@
   </div>
 
   <div class="footer-content">
-    <h1>Subscribe</h1>
-
-    <div class="newsletter">
-
-      <input name="" type="text" class="newsletter-input"/>
-      <a href="#"><img src="images/btn-subscribe.gif" /></a>        </div>
 
     &#169; mApp<br />
 

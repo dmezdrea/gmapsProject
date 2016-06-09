@@ -368,7 +368,7 @@ $scope.config.filters = {mine: false};
         //Methods
         vm.addCoordinates = addCoordinates;
         vm.applyFilters = function(){
-            vm.markers = $filter('filter')(vm.markersBackup, {"owner": ($scope.config.filters.mine ? $scope.$storage.user.name:"")});
+            vm.markers = $filter('filter')(vm.markersBackup, {"owner": ($scope.config.filters.mine ? $scope.$storage.user.userName:"")});
             console.log("aa")
         }
 
@@ -757,6 +757,11 @@ $scope.config.filters = {mine: false};
 				controller:	'RegisterCtrl',
 				controllerAs: 'reg'
 			}).
+            when('/contact', {
+                templateUrl: 'pages/map/contact.html',
+                controller: 'ContactCtrl',
+                controllerAs: 'contact'
+            }).
 	    	otherwise({
 	    		redirectTo: '/login'
 			});
