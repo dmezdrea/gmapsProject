@@ -442,3 +442,14 @@ a.createLink {
     top: 2px;
 }
 
+.theLegend{
+	margin-top:30px;
+}
+
+.theLegend > img {
+	opacity: 0.6;
+}
+
+.theLegend > img.selected{
+	opacity:1;
+}

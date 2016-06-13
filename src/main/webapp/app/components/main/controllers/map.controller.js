@@ -59,7 +59,7 @@ $scope.config.theIcons = {
 },
 "clubs.png":{
 "label": "Clubs.png",
-"path":"images/map-icons/clubs.png.png"
+"path":"images/map-icons/clubs.png"
 },
 "coffee-n-tea":{
 "label": "Coffee-n-tea",
@@ -137,6 +137,9 @@ $scope.config.theIcons = {
 
 }
 
+
+
+
 $scope.config.filters = {mine: false};
 
 
@@ -171,11 +174,29 @@ $scope.config.filters = {mine: false};
         vm.cssClass = "ok";
 
         //Methods
+        vm.activeFilter = {"owner": ($scope.config.filters.mine ? $scope.$storage.user.userName:"")};
         vm.addCoordinates = addCoordinates;
         vm.applyFilters = function(){
-            vm.markers = $filter('filter')(vm.markersBackup, {"owner": ($scope.config.filters.mine ? $scope.$storage.user.userName:"")});
-            console.log("aa")
-        }
+            vm.markers = $filter('filter')(vm.markersBackup, vm.activeFilter);
+        };
+
+        vm.toggleFilter = function(key){
+            //if(typeof vm.activeFilter[key] != "undefined"){
+            //    delete vm.activeFilter[key];
+            //}else{
+            //    vm.activeFilter[key] = true;
+            //}
+            if(vm.activeFilter["icon"] == key){
+                vm.activeFilter["icon"] = "";
+            }else{
+                vm.activeFilter["icon"] = key;
+            }
+
+
+
+            vm.applyFilters();
+        };
+
 
         activate();
 

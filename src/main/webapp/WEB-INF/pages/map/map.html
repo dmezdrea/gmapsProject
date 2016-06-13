@@ -58,7 +58,7 @@
                                         <td>Categorie:</td>
                                         <td>
                                             <select ng-model="theObject.icon"
-                                                    ng-change="">
+                                            ng-change="">
                                                 <option value="">Choose an option</option>
                                                 <option value="accountancy">Accountancy</option>
                                                 <option value="arts-crafts">Arts-crafts</option>
@@ -105,6 +105,10 @@
                 <h1>Filters</h1>
                 <br />
                 <label for="myPointers" ><input ng-click="map.applyFilters();" name="myPointers" type="checkbox" ng-model="config.filters.mine" />Select my POI's</label>
+
+                <div class="theLegend">
+                    <img ng-repeat="(key,value) in config.theIcons" src="{{value.path}}" ng-click="map.toggleFilter(key)" ng-class="{'selected':map.activeFilter['icon'] == key}" />
+                </div>
             </div>
         </div>
         <!---banner-image ends here-->
