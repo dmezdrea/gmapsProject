@@ -2,18 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96754dab-bbb0-4e42-a26c-4e87f9fdf1a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/maps.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action_container.js" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action_container.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/app.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/app.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/argument_parser.js" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/argument_parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-bower-concat/node_modules/underscore.string/test/test_underscore/collections.js" afterPath="$PROJECT_DIR$/node_modules/grunt-bower-concat/node_modules/underscore.string/test/test_underscore/collections.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/collections.js" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/collections.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/collections.js" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/test_underscore/collections.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/contact.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint-rhino.js" afterPath="$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint-rhino.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint.js" afterPath="$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/lib.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/style/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/style/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/style/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/style/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/main.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/app/components/main/controllers/map.controller.js" afterPath="$PROJECT_DIR$/src/main/webapp/app/components/main/controllers/map.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/map/map.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/map/map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-bower-concat/node_modules/bower/node_modules/handlebars/coverage/lcov-report/spec/spec.js.html" afterPath="$PROJECT_DIR$/node_modules/grunt-bower-concat/node_modules/bower/node_modules/handlebars/coverage/lcov-report/spec/spec.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-bower-concat/node_modules/underscore.string/test/underscore.js" afterPath="$PROJECT_DIR$/node_modules/grunt-bower-concat/node_modules/underscore.string/test/underscore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/underscore/underscore.js" afterPath="$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/underscore/underscore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/underscore.js" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/underscore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/underscore.js" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/underscore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/underscore.js" afterPath="$PROJECT_DIR$/node_modules/grunt/node_modules/underscore.string/test/underscore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mApp.iws" />
@@ -106,39 +114,39 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7381" max-vertical-offset="13787">
-              <caret line="446" column="27" selection-start-line="446" selection-start-column="27" selection-end-line="446" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7398" max-vertical-offset="13804">
+              <caret line="447" column="27" selection-start-line="447" selection-start-column="27" selection-end-line="447" selection-end-column="27" />
               <folding>
-                <marker date="1465821868446" expanded="true" signature="1762:3646" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="2059:3640" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="3000:3479" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="3386:3442" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="3541:3609" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="3846:4320" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="4112:4124" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="4173:4286" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="4193:4236" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="5038:7389" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="6083:6143" placeholder="{&quot;label&quot;: &quot;Community&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6176:6246" placeholder="{&quot;label&quot;: &quot;Computers&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6270:6325" placeholder="{&quot;label&quot;: &quot;Concerts&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6350:6404" placeholder="{&quot;label&quot;: &quot;Cookbooks&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6430:6480" placeholder="{&quot;label&quot;: &quot;Dance-clubs&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6503:6559" placeholder="{&quot;label&quot;: &quot;Default&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6583:6644" placeholder="{&quot;label&quot;: &quot;Dental&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6665:6717" placeholder="{&quot;label&quot;: &quot;Doctors&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6739:6787" placeholder="{&quot;label&quot;: &quot;Education&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6812:6860" placeholder="{&quot;label&quot;: &quot;Electronics&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6886:6939" placeholder="{&quot;label&quot;: &quot;Employment&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="6968:7024" placeholder="{&quot;label&quot;: &quot;Engineering&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="7054:7106" placeholder="{&quot;label&quot;: &quot;Entertainment&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="7129:7191" placeholder="{&quot;label&quot;: &quot;Event&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="7222:7282" placeholder="{&quot;label&quot;: &quot;Exhibitions&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="7301:7349" placeholder="{&quot;label&quot;: &quot;Fashion&quot;...}" />
-                <marker date="1465821868446" expanded="true" signature="7732:7797" placeholder="{&quot;latitude&quot;: 44.435730...}" />
-                <marker date="1465821868446" expanded="true" signature="8034:8378" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="8115:8347" placeholder="{...}" />
-                <marker date="1465821868446" expanded="true" signature="20402:20403" placeholder="{&quot;templateUrl&quot;: 'pages/map/contact.html'...}" />
+                <marker date="1465822427324" expanded="true" signature="1762:3646" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="2059:3640" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="3000:3479" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="3386:3442" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="3541:3609" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="3846:4320" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="4112:4124" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="4173:4286" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="4193:4236" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="5038:7389" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="6083:6143" placeholder="{&quot;label&quot;: &quot;Community&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6176:6246" placeholder="{&quot;label&quot;: &quot;Computers&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6270:6325" placeholder="{&quot;label&quot;: &quot;Concerts&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6350:6404" placeholder="{&quot;label&quot;: &quot;Cookbooks&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6430:6480" placeholder="{&quot;label&quot;: &quot;Dance-clubs&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6503:6559" placeholder="{&quot;label&quot;: &quot;Default&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6583:6644" placeholder="{&quot;label&quot;: &quot;Dental&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6665:6717" placeholder="{&quot;label&quot;: &quot;Doctors&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6739:6787" placeholder="{&quot;label&quot;: &quot;Education&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6812:6860" placeholder="{&quot;label&quot;: &quot;Electronics&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6886:6939" placeholder="{&quot;label&quot;: &quot;Employment&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="6968:7024" placeholder="{&quot;label&quot;: &quot;Engineering&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="7054:7106" placeholder="{&quot;label&quot;: &quot;Entertainment&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="7129:7191" placeholder="{&quot;label&quot;: &quot;Event&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="7222:7282" placeholder="{&quot;label&quot;: &quot;Exhibitions&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="7301:7349" placeholder="{&quot;label&quot;: &quot;Fashion&quot;...}" />
+                <marker date="1465822427324" expanded="true" signature="7732:7797" placeholder="{&quot;latitude&quot;: 44.435730...}" />
+                <marker date="1465822427324" expanded="true" signature="8034:8378" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="8115:8347" placeholder="{...}" />
+                <marker date="1465822427324" expanded="true" signature="20501:20502" placeholder="{&quot;templateUrl&quot;: 'pages/map/contact.html'...}" />
               </folding>
             </state>
           </provider>
@@ -147,37 +155,47 @@
       <file leaf-file-name="map.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/app/components/main/controllers/map.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.178571" vertical-offset="3046" max-vertical-offset="5729">
-              <caret line="191" column="46" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
+            <state vertical-scroll-proportion="-7.785714" vertical-offset="2825" max-vertical-offset="5746">
+              <caret line="179" column="98" selection-start-line="179" selection-start-column="98" selection-end-line="179" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/style/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7370" max-vertical-offset="7820">
-              <caret line="453" column="14" selection-start-line="453" selection-start-column="14" selection-end-line="453" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.39807692" vertical-offset="6950" max-vertical-offset="9656">
+              <caret line="421" column="13" selection-start-line="421" selection-start-column="13" selection-end-line="421" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="map.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5840708" vertical-offset="1587" max-vertical-offset="2108">
-              <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+            <state vertical-scroll-proportion="-6.3461537" vertical-offset="1586" max-vertical-offset="2108">
+              <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.64" vertical-offset="166" max-vertical-offset="714">
+            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="561">
+              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map-window.tmpl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map-window.tmpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="714">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -200,7 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/map/app/DAO/Impl/CoordinatesDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/map/app/DAO/CoordinatesDAO.java" />
@@ -246,11 +263,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/map/contact.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/style/main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/contact.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/map/map.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/style/main.css" />
+        <option value="$PROJECT_DIR$/bower_components/angular-google-maps/dist/angular-google-maps.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/app/components/main/controllers/map.controller.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/contact.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/style/main.css" />
       </list>
     </option>
   </component>
@@ -1533,7 +1551,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181648000" />
+    <option name="totallyTimeSpent" value="183033000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1557,14 +1575,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40979955" sideWeight="0.42217484" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27060133" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12556732" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12556732" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0127345845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1578,7 +1596,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31228667" sideWeight="0.5772921" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39249146" sideWeight="0.5772921" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.8063003" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2134503" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1627,13 +1645,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/map/app/DAO/CoordinatesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/map/app/DAO/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
@@ -1689,13 +1700,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="782">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1811,24 +1815,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map-window.tmpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/inserted.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="278">
           <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1900,39 +1890,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7381" max-vertical-offset="13787">
-          <caret line="446" column="27" selection-start-line="446" selection-start-column="27" selection-end-line="446" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7398" max-vertical-offset="13804">
+          <caret line="447" column="27" selection-start-line="447" selection-start-column="27" selection-end-line="447" selection-end-column="27" />
           <folding>
-            <marker date="1465821868446" expanded="true" signature="1762:3646" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="2059:3640" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="3000:3479" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="3386:3442" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="3541:3609" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="3846:4320" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="4112:4124" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="4173:4286" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="4193:4236" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="5038:7389" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="6083:6143" placeholder="{&quot;label&quot;: &quot;Community&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6176:6246" placeholder="{&quot;label&quot;: &quot;Computers&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6270:6325" placeholder="{&quot;label&quot;: &quot;Concerts&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6350:6404" placeholder="{&quot;label&quot;: &quot;Cookbooks&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6430:6480" placeholder="{&quot;label&quot;: &quot;Dance-clubs&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6503:6559" placeholder="{&quot;label&quot;: &quot;Default&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6583:6644" placeholder="{&quot;label&quot;: &quot;Dental&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6665:6717" placeholder="{&quot;label&quot;: &quot;Doctors&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6739:6787" placeholder="{&quot;label&quot;: &quot;Education&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6812:6860" placeholder="{&quot;label&quot;: &quot;Electronics&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6886:6939" placeholder="{&quot;label&quot;: &quot;Employment&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="6968:7024" placeholder="{&quot;label&quot;: &quot;Engineering&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="7054:7106" placeholder="{&quot;label&quot;: &quot;Entertainment&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="7129:7191" placeholder="{&quot;label&quot;: &quot;Event&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="7222:7282" placeholder="{&quot;label&quot;: &quot;Exhibitions&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="7301:7349" placeholder="{&quot;label&quot;: &quot;Fashion&quot;...}" />
-            <marker date="1465821868446" expanded="true" signature="7732:7797" placeholder="{&quot;latitude&quot;: 44.435730...}" />
-            <marker date="1465821868446" expanded="true" signature="8034:8378" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="8115:8347" placeholder="{...}" />
-            <marker date="1465821868446" expanded="true" signature="20402:20403" placeholder="{&quot;templateUrl&quot;: 'pages/map/contact.html'...}" />
+            <marker date="1465822427324" expanded="true" signature="1762:3646" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="2059:3640" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="3000:3479" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="3386:3442" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="3541:3609" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="3846:4320" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="4112:4124" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="4173:4286" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="4193:4236" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="5038:7389" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="6083:6143" placeholder="{&quot;label&quot;: &quot;Community&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6176:6246" placeholder="{&quot;label&quot;: &quot;Computers&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6270:6325" placeholder="{&quot;label&quot;: &quot;Concerts&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6350:6404" placeholder="{&quot;label&quot;: &quot;Cookbooks&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6430:6480" placeholder="{&quot;label&quot;: &quot;Dance-clubs&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6503:6559" placeholder="{&quot;label&quot;: &quot;Default&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6583:6644" placeholder="{&quot;label&quot;: &quot;Dental&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6665:6717" placeholder="{&quot;label&quot;: &quot;Doctors&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6739:6787" placeholder="{&quot;label&quot;: &quot;Education&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6812:6860" placeholder="{&quot;label&quot;: &quot;Electronics&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6886:6939" placeholder="{&quot;label&quot;: &quot;Employment&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="6968:7024" placeholder="{&quot;label&quot;: &quot;Engineering&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="7054:7106" placeholder="{&quot;label&quot;: &quot;Entertainment&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="7129:7191" placeholder="{&quot;label&quot;: &quot;Event&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="7222:7282" placeholder="{&quot;label&quot;: &quot;Exhibitions&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="7301:7349" placeholder="{&quot;label&quot;: &quot;Fashion&quot;...}" />
+            <marker date="1465822427324" expanded="true" signature="7732:7797" placeholder="{&quot;latitude&quot;: 44.435730...}" />
+            <marker date="1465822427324" expanded="true" signature="8034:8378" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="8115:8347" placeholder="{...}" />
+            <marker date="1465822427324" expanded="true" signature="20501:20502" placeholder="{&quot;templateUrl&quot;: 'pages/map/contact.html'...}" />
           </folding>
         </state>
       </provider>
@@ -1942,17 +1932,6 @@
         <state vertical-scroll-proportion="0.37773722" vertical-offset="7834" max-vertical-offset="11050">
           <caret line="476" column="30" selection-start-line="476" selection-start-column="30" selection-end-line="476" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/angular-google-maps/dist/angular-google-maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.439781" vertical-offset="114900" max-vertical-offset="262497">
-          <caret line="6776" column="37" selection-start-line="6776" selection-start-column="37" selection-end-line="6776" selection-end-column="37" />
-          <folding>
-            <marker date="1465818643186" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1465818643186" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1988,10 +1967,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/maps.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/angular-google-maps/dist/angular-google-maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34671533" vertical-offset="7426" max-vertical-offset="262497">
+          <caret line="451" column="11" selection-start-line="451" selection-start-column="11" selection-end-line="451" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.64" vertical-offset="166" max-vertical-offset="714">
+        <state vertical-scroll-proportion="-0.31739962" vertical-offset="166" max-vertical-offset="714">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/components/main/controllers/map.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.785714" vertical-offset="2825" max-vertical-offset="5746">
+          <caret line="179" column="98" selection-start-line="179" selection-start-column="98" selection-end-line="179" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3461537" vertical-offset="1586" max-vertical-offset="2108">
+          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="561">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -2001,31 +2017,31 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/maps.png">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map-window.tmpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/images/gmaps.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/style/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7370" max-vertical-offset="7820">
-          <caret line="453" column="14" selection-start-line="453" selection-start-column="14" selection-end-line="453" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/app/components/main/controllers/map.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.178571" vertical-offset="3046" max-vertical-offset="5729">
-          <caret line="191" column="46" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map/map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5840708" vertical-offset="1587" max-vertical-offset="2108">
-          <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.39807692" vertical-offset="6950" max-vertical-offset="9656">
+          <caret line="421" column="13" selection-start-line="421" selection-start-column="13" selection-end-line="421" selection-end-column="13" />
           <folding />
         </state>
       </provider>

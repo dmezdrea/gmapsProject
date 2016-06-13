@@ -387,6 +387,7 @@ $scope.config.filters = {mine: false};
         vm.activeFilter = {"owner": ($scope.config.filters.mine ? $scope.$storage.user.userName:"")};
         vm.addCoordinates = addCoordinates;
         vm.applyFilters = function(){
+            vm.activeFilter.owner = $scope.config.filters.mine ? $scope.$storage.user.userName:"";
             vm.markers = $filter('filter')(vm.markersBackup, vm.activeFilter);
         };
 

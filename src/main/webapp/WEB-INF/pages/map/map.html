@@ -107,7 +107,7 @@
                 <label for="myPointers" ><input ng-click="map.applyFilters();" name="myPointers" type="checkbox" ng-model="config.filters.mine" />Select my POI's</label>
 
                 <div class="theLegend">
-                    <img ng-repeat="(key,value) in config.theIcons" src="{{value.path}}" ng-click="map.toggleFilter(key)" ng-class="{'selected':map.activeFilter['icon'] == key}" />
+                    <img ng-repeat="(key,value) in config.theIcons" src="{{value.path}}" ng-click="map.toggleFilter(key)" title="{{value.label}}" ng-class="{'selected':map.activeFilter['icon'] == key}" />
                 </div>
             </div>
         </div>
