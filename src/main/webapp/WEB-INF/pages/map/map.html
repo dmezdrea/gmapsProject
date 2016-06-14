@@ -102,10 +102,15 @@
                 </ui-gmap-google-map>
             </div>
             <div class="mapFilters">
-                <h1>Filters</h1>
+                <h1>Filtre</h1>
                 <br />
-                <label for="myPointers" ><input ng-click="map.applyFilters();" name="myPointers" type="checkbox" ng-model="config.filters.mine" />Select my POI's</label>
-
+                <label for="myPointers" ><input ng-click="map.applyFilters();" name="myPointers" type="checkbox" ng-model="config.filters.mine" />Selecteaza POI-urile mele</label>
+                <br /><br />
+                <label for="searchName">Cautare dupa nume</label>
+                <input type="text" class="searchField" ng-model="config.filters.name" name="searchName"/>
+                <br />
+                <label for="searchDescr">Cautare dupa descriere</label>
+                <input type="text" class="searchField" ng-model="config.filters.description" name="searchDescr"/>
                 <div class="theLegend">
                     <img ng-repeat="(key,value) in config.theIcons" src="{{value.path}}" ng-click="map.toggleFilter(key)" title="{{value.label}}" ng-class="{'selected':map.activeFilter['icon'] == key}" />
                 </div>

@@ -346,11 +346,7 @@ $scope.config.theIcons = {
 
 
 }
-
-
-
-
-$scope.config.filters = {mine: false};
+$scope.config.filters = {mine: false, name:"", description:""};
 
 
 
@@ -388,8 +384,15 @@ $scope.config.filters = {mine: false};
         vm.addCoordinates = addCoordinates;
         vm.applyFilters = function(){
             vm.activeFilter.owner = $scope.config.filters.mine ? $scope.$storage.user.userName:"";
+            vm.activeFilter.name = $scope.config.filters.name;
+            vm.activeFilter.description = $scope.config.filters.description;
             vm.markers = $filter('filter')(vm.markersBackup, vm.activeFilter);
         };
+
+        $scope.$watch('config.filters.name + config.filters.description', function(newValue, oldValue) {
+            vm.applyFilters();
+        });
+
 
         vm.toggleFilter = function(key){
             //if(typeof vm.activeFilter[key] != "undefined"){
